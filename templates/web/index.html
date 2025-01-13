@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Welcome to Swiftface</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100">
+
+  <!-- Navbar -->
+  <nav class="bg-blue-500 p-4 text-white">
+    <div class="max-w-7xl mx-auto flex justify-between items-center">
+      <div class="text-2xl font-bold">Swiftface</div>
+      <div>
+        <a href="{% url 'web:login' %}" class="text-white px-4 py-2">Student Login</a>
+        <a href="#" class="text-white px-4 py-2">Parent Login</a>
+        <a href="#" class="text-white px-4 py-2">Logout</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Main Content -->
+  <div class="flex justify-center items-center min-h-screen">
+    <div class="max-w-3xl p-10 bg-white shadow-xl rounded-lg">
+      <h1 class="text-4xl font-bold text-center text-blue-600 mb-6">Welcome to Swiftface!</h1>
+      <p class="text-lg text-gray-700 text-center mb-8">
+        Swiftface makes life easier by letting you enjoy quick and secure services. Get your favorite meals or manage your academic activities without the hassle. 
+        <br><br>
+        Choose your role below:
+      </p>
+
+      <!-- Role Selection -->
+      <div class="flex justify-center gap-10">
+        <div class="text-center">
+          <h3 class="text-xl font-semibold text-blue-600 mb-2">Students</h3>
+          <p class="text-gray-600 mb-4">Log in to access your student dashboard.</p>
+          <a href="{% url 'web:login' %}" class="text-blue-500 underline">Login as Student</a>
+        </div>
+        <div class="text-center">
+          <h3 class="text-xl font-semibold text-blue-600 mb-2">Parents</h3>
+          <p class="text-gray-600 mb-4">Log in to access your parent dashboard.</p>
+          <a href="#" class="text-blue-500 underline">Login as Parent</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="bg-gray-800 text-white text-center py-4">
+    <p>© 2024 Swiftface. All rights reserved.</p>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Dashboard</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+</head>
+<body class="text-[#515151]">
+
+    <header class="h-[80px] shadow-md">
+    <section class="wrapper w-[90%] mx-auto h-full flex justify-between items-center">
+    <div>
+    <h1 class="text-blue-500 text-2xl font-bold">Swiftface</h1>
+    </div>
+    <div class="hidden md:block">
+        <ul class="flex justify-center">
+            <li class="mr-7"><a class="flex justify-start text-[18px] items-center hover:text-blue-600 font-semibold" href="index.html"><img src="{% static 'images/home.png' %}" alt="image" class="w-[18px] mr-2">Home</a></li>
+            <li class="mr-7"><a class="flex justify-start text-[18px] items-center hover:text-blue-600 font-semibold" href="#"><img src="{% static 'images/bag.png' %}" alt="image" class="w-[18px] mr-2">Cart</a></li>
+            <li><a class="flex justify-start text-[18px] items-center hover:text-blue-600 font-semibold" href="#"><img src="{% static 'images/user.png' %}" alt="image" class="w-[18px] mr-2">Account</a></li>
+        </ul>
+    </div>
+    <div class="flex justify-end items-center">
+        <img src="{% static 'images/map.png' %}" alt="image" class="w-[18px] mr-2">
+        <p class="text-18px font-semibold pb-1 border-b-2 border-blue-600">School Name</p>
+    </div>
+    </section>
+    </header>
+    <section class="py-10">
+        <section class="wrapper w-[90%] mx-auto">
+            <section class="swiper mySwiper">
+            <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <img src="{% static 'images/slideone.jpg' %}" alt="image" class="w-full rounded-2xl">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="{% static 'images/slidetwo.jpg' %}" alt="image" class="w-full rounded-2xl">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="{% static 'images/slidethree.jpg' %}" alt="image" class="w-full rounded-2xl">
+                    </div>
+            </div>
+            </section>
+        </section>
+    </section>
+    
+
+    <section id="available" class="py-10">
+        <section class="wrapper w-[90%] mx-auto">
+            <div class="heading text-center mb-12">
+                <h1 class="text-2xl font-semibold font-lato">Available Meals</h1>
+            </div>
+            <div class="products flex justify-center items-center">
+                <ul class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-10">
+                    <li class="w-[251px] h-[400px] rounded-lg shadow-lg relative">
+                        <img class="img w-[230px] h-[261px] rounded-lg bg-gray-300 mt-4 mx-auto" src="./img/product-1.jpg" alt="product">
+                        
+                        <h1 class="text-lg font-medium text-gray-700 mt-2 ml-3">Lorem, ipsum.</h1>
+                        <p class="text-sm text-gray-400 mt-2 ml-3">Lorem ipsum dolor sit amet good</p>
+                        
+                        <h2 class="text-xl font-semibold text-gray-700 mt-2 ml-3">₹ 450</h2>
+                        <a class="add flex justify-center items-center w-[85px] h-[38px] bg-green-600 rounded-md absolute bottom-0 left-[155px] mb-4">
+                            <img src="{% static 'images/white-cart.png' %}" alt="cart" class="w-3 h-3">
+                            <h3 class="text-sm text-white ml-2">ADD</h3>
+                        </a>
+                    </li>
+                    <li class="w-[251px] h-[400px] rounded-lg shadow-lg relative">
+                        <img class="img w-[230px] h-[261px] rounded-lg bg-gray-300 mt-4 mx-auto" src="./img/product-2.jpg" alt="product">
+                        
+                        <h1 class="text-lg font-medium text-gray-700 mt-2 ml-3">Lorem, ipsum.</h1>
+                        <p class="text-sm text-gray-400 mt-2 ml-3">Lorem ipsum dolor sit amet good</p>
+                        
+                        <h2 class="text-xl font-semibold text-gray-700 mt-2 ml-3">₹ 450</h2>
+                        <p class="amount flex justify-center items-center w-[85px] h-[38px] border border-green-600 text-green-600 absolute bottom-0 left-[155px] mb-4">
+                            <a href="#" class="px-2">-</a>
+                            <a href="#" class="px-2">1</a>
+                            <a href="#" class="px-2">+</a>
+                        </p>
+                    </li>
+                    <li class="w-[251px] h-[400px] rounded-lg shadow-lg relative">
+                        <img class="img w-[230px] h-[261px] rounded-lg bg-gray-300 mt-4 mx-auto" src="./img/product-3.jpg" alt="product">
+                        
+                        <h1 class="text-lg font-medium text-gray-700 mt-2 ml-3">Lorem, ipsum.</h1>
+                        <p class="text-sm text-gray-400 mt-2 ml-3">Lorem ipsum dolor sit amet good</p>
+                        
+                        <h2 class="text-xl font-semibold text-gray-700 mt-2 ml-3">₹ 450</h2>
+                        <a class="add flex justify-center items-center w-[85px] h-[38px] bg-green-600 rounded-md absolute bottom-0 left-[155px] mb-4">
+                            <img src="{% static 'images/white-cart.png' %}" alt="cart" class="w-3 h-3">
+                            <h3 class="text-sm text-white ml-2">ADD</h3>
+                        </a>
+                    </li>
+                    <li class="w-[251px] h-[400px] rounded-lg shadow-lg relative">
+                        <img class="img w-[230px] h-[261px] rounded-lg bg-gray-300 mt-4 mx-auto" src="./img/product-4.jpg" alt="product">
+                        
+                        <h1 class="text-lg font-medium text-gray-700 mt-2 ml-3">Lorem, ipsum.</h1>
+                        <p class="text-sm text-gray-400 mt-2 ml-3">Lorem ipsum dolor sit amet good</p>
+                        
+                        <h2 class="text-xl font-semibold text-gray-700 mt-2 ml-3">₹ 450</h2>
+                        <a class="add flex justify-center items-center w-[85px] h-[38px] bg-green-600 rounded-md absolute bottom-0 left-[155px] mb-4">
+                            <img src="{% static 'images/white-cart.png' %}" alt="cart" class="w-3 h-3">
+                            <h3 class="text-sm text-white ml-2">ADD</h3>
+                        </a>
+                    </li>
+                    <li class="w-[251px] h-[400px] rounded-lg shadow-lg relative">
+                        <img class="img w-[230px] h-[261px] rounded-lg bg-gray-300 mt-4 mx-auto" src="./img/product-3.jpg" alt="product">
+                        
+                        <h1 class="text-lg font-medium text-gray-700 mt-2 ml-3">Lorem, ipsum.</h1>
+                        <p class="text-sm text-gray-400 mt-2 ml-3">Lorem ipsum dolor sit amet good</p>
+                        
+                        <h2 class="text-xl font-semibold text-gray-700 mt-2 ml-3">₹ 450</h2>
+                        <a class="add flex justify-center items-center w-[85px] h-[38px] bg-green-600 rounded-md absolute bottom-0 left-[155px] mb-4">
+                            <img src="{% static 'images/white-cart.png' %}" alt="cart" class="w-3 h-3">
+                            <h3 class="text-sm text-white ml-2">ADD</h3>
+                        </a>
+                    </li>
+                    <li class="w-[251px] h-[400px] rounded-lg shadow-lg relative">
+                        <img class="img w-[230px] h-[261px] rounded-lg bg-gray-300 mt-4 mx-auto" src="./img/product-4.jpg" alt="product">
+                        
+                        <h1 class="text-lg font-medium text-gray-700 mt-2 ml-3">Lorem, ipsum.</h1>
+                        <p class="text-sm text-gray-400 mt-2 ml-3">Lorem ipsum dolor sit amet good</p>
+                        
+                        <h2 class="text-xl font-semibold text-gray-700 mt-2 ml-3">₹ 450</h2>
+                        <a class="add flex justify-center items-center w-[85px] h-[38px] bg-green-600 rounded-md absolute bottom-0 left-[155px] mb-4">
+                            <img src="{% static 'images/white-cart.png' %}" alt="cart" class="w-3 h-3">
+                            <h3 class="text-sm text-white ml-2">ADD</h3>
+                        </a>
+                    </li>
+                    <li class="w-[251px] h-[400px] rounded-lg shadow-lg relative">
+                        <img class="img w-[230px] h-[261px] rounded-lg bg-gray-300 mt-4 mx-auto" src="./img/product-3.jpg" alt="product">
+                        
+                        <h1 class="text-lg font-medium text-gray-700 mt-2 ml-3">Lorem, ipsum.</h1>
+                        <p class="text-sm text-gray-400 mt-2 ml-3">Lorem ipsum dolor sit amet good</p>
+                        
+                        <h2 class="text-xl font-semibold text-gray-700 mt-2 ml-3">₹ 450</h2>
+                        <a class="add flex justify-center items-center w-[85px] h-[38px] bg-green-600 rounded-md absolute bottom-0 left-[155px] mb-4">
+                            <img src="{% static 'images/white-cart.png' %}" alt="cart" class="w-3 h-3">
+                            <h3 class="text-sm text-white ml-2">ADD</h3>
+                        </a>
+                    </li>
+                    <li class="w-[251px] h-[400px] rounded-lg shadow-lg relative">
+                        <img class="img w-[230px] h-[261px] rounded-lg bg-gray-300 mt-4 mx-auto" src="./img/product-4.jpg" alt="product">
+                        
+                        <h1 class="text-lg font-medium text-gray-700 mt-2 ml-3">Lorem, ipsum.</h1>
+                        <p class="text-sm text-gray-400 mt-2 ml-3">Lorem ipsum dolor sit amet good</p>
+                        <h2 class="text-xl font-semibold text-gray-700 mt-2 ml-3">₹ 450</h2>
+                        <a class="add flex justify-center items-center w-[85px] h-[38px] bg-green-600 rounded-md absolute bottom-0 left-[155px] mb-4">
+                            <img src="{% static 'images/white-cart.png' %}" alt="cart" class="w-3 h-3">
+                            <h3 class="text-sm text-white ml-2">ADD</h3>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </section>
+    </section>
+    
+
+    <section class="py-10">
+        <section class="wrapper w-[90%] mx-auto">
+          <h1 class="text-[24px] text-center font-bold mb-5">Lorem, ipsum.</h1>
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-7">
+                <a href="#">
+               <div class="flex justify-start rounded-lg p-4 border col-span-1">
+                <img src="./img/rest1.png" alt="image" class="w-[35%] rounded-xl mr-4">
+                <div class="w-[65%]">
+                    <h3 class="text-[16px] mb-1 font-semibold">Lorem, ipsum dolor.</h3>
+                    <p class="text-[12px] mb-4">Lorem ipsum dolor sit.</p>
+                   <div class="flex justify-start items-center ">
+                    <span class="flex justify-start items-center mr-4">
+                        <img src="./img/star.png" alt="image" class="w-[16px] mr-2">
+                        4.2
+                    </span>
+                    <span class="flex justify-start items-center">
+                        <img src="./img/clock.png" alt="image" class="w-[16px] mr-2">
+                        30 min
+                    </span> 
+                   </div>
+                </div>
+               </div>
+            </a>
+
+            <a href="#">
+                <div class="flex justify-start rounded-lg p-4 border col-span-1">
+                 <img src="./img/rest1.png" alt="image" class="w-[35%] rounded-xl mr-4">
+                 <div class="w-[65%]">
+                     <h3 class="text-[16px] mb-1 font-semibold">Lorem, ipsum dolor.</h3>
+                     <p class="text-[12px] mb-4">Lorem ipsum dolor sit.</p>
+                    <div class="flex justify-start items-center ">
+                     <span class="flex justify-start items-center mr-4">
+                         <img src="./img/star.png" alt="image" class="w-[16px] mr-2">
+                         4.2
+                     </span>
+                     <span class="flex justify-start items-center">
+                         <img src="./img/clock.png" alt="image" class="w-[16px] mr-2">
+                         30 min
+                     </span> 
+                    </div>
+                 </div>
+                </div>
+             </a>
+
+             <a href="#">
+                <div class="flex justify-start rounded-lg p-4 border col-span-1">
+                 <img src="./img/rest1.png" alt="image" class="w-[35%] rounded-xl mr-4">
+                 <div class="w-[65%]">
+                     <h3 class="text-[16px] mb-1 font-semibold">Lorem, ipsum dolor.</h3>
+                     <p class="text-[12px] mb-4">Lorem ipsum dolor sit.</p>
+                    <div class="flex justify-start items-center ">
+                     <span class="flex justify-start items-center mr-4">
+                         <img src="./img/star.png" alt="image" class="w-[16px] mr-2">
+                         4.2
+                     </span>
+                     <span class="flex justify-start items-center">
+                         <img src="./img/clock.png" alt="image" class="w-[16px] mr-2">
+                         30 min
+                     </span> 
+                    </div>
+                 </div>
+                </div>
+             </a>
+            </div>
+        </section>
+    </section>
+ 
+
+     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+  <!-- Initialize Swiper -->
+  <script>
+    var swiper = new Swiper(".mySwiper", {
+      spaceBetween: 30,
+      centeredSlides: true,
+      autoplay: {
+        delay: 2500,
+        disableOnInteraction: false,
+      },
+      breakpoints: {
+        // when window width is <= 499px
+        499: {
+            slidesPerView: 1,
+            spaceBetweenSlides: 50
+        },
+        // when window width is <= 999px
+        999: {
+            slidesPerView: 3,
+            spaceBetweenSlides: 50
+        }
+    },
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+    });
+  </script>
+</body>
+</html>
